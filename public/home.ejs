@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <table class="table">
+      <% for(var i=0; i < user.length; i++) { %>
+         <tr>
+           <td><%= user[i].id %></td>
+           <td><%= user[i].name %></td>
+         </tr>
+      <% } %>
+    </table>
+  
+    <form method="POST" action="/tung">
+      <input name="id" type="number" placeholder="id">
+      <input name="name" placeholder="name">
+      <button type="submit">Add</button>
+    </form>
+
+  </body>
+</html>
+
